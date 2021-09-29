@@ -1,4 +1,8 @@
 {
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "@discordjs/builders": "^0.6.0",
     "@discordjs/voice": "^0.6.0",
@@ -22,5 +26,8 @@
     "passport-discord": "^0.1.4",
     "session": "^0.1.0",
     "url": "^0.11.0"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
