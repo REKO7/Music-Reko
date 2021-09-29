@@ -1,23 +1,23 @@
 {
     "website" : {
       "support": "https://discord.gg/milrato",
-      "domain": "http://your-domain.com"
+      "domain": "https://marked-verbena-licorice.glitch.me"
     },
     "config": {
         "http": {
-          "port": 80
+          "port": 8080
         },
         "https": {
             "paths": {
-                "privkey": "/etc/letsencrypt/live/your-domain.com/privkey.pem",
+                "privkey": "/etc/letsencrypt/live/marked-verbena-licorice.glitch.me/privkey.pem",
                 "fullchain": "/etc/letsencrypt/live/your-domain.com/fullchain.pem",
-                "chain": "/etc/letsencrypt/live/your-domain.com/chain.pem"
+                "chain": "/etc/letsencrypt/live/marked-verbena-licorice.glitch.me/chain.pem"
             },
             "enabled": false,
-            "port": 443
+            "port": 8080
         },
-        "callback": "http://your-domain.com/callback",
-        "clientID": "",
-        "secret": ""
+        "callback": "https://marked-verbena-licorice.glitch.me/callback",
+        "clientID": "860960049949311026",
+        "secret": "rAX6is_iR-K31AP2RxtsRCI45sGMq-zA"
     }
   }
