@@ -36,7 +36,7 @@ module.exports = {
         guild
       } = member;
       message.reply({
-        content: "https://discord.gg/milrato"
+        content: "https://discord.gg/aW6TnhGeSS"
       });
     } catch (e) {
       console.log(String(e.stack).bgRed)
