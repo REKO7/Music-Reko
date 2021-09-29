@@ -5,6 +5,7 @@ const path = require(`path`);
 const { Permissions } = require("discord.js");
 const ejs = require("ejs");
 const fs = require("fs")
+const Discord = require("discord.js")
 const passport = require(`passport`);
 const bodyParser = require("body-parser");
 const Strategy = require(`passport-discord`).Strategy;
@@ -319,36 +320,37 @@ module.exports = client => {
         BotEmojis: BotEmojis,
       });
     })
+  /*
 
   client.on("guildCreate", guild => {
   let channel = client.channels.cache.get("837692597114765322");
   let embed = new Discord.MessageEmbed().setColor("#ff0000")
   .setAuthor(client.user.username, client.user.avatarURL())
   .setTitle("✅ Join Server")
-  .addField(` serverName: ${guild.name}`)
-  .addField(`server owner: ${guild.owner}`)
+
+  .addField(`server owner: ${guild.ownerId}`)
   
   .addField(`busts_in_silhouette Member Count:  ${guild.memberCount}`)
-  .setFooter(`${client.user.tag}`);
+  
   channel.send({embeds:[embed]});
 });
 
 client.on("guildDelete", guild => {
   let channel = client.channels.cache.get("837692597114765322");
-  let embed = new MessageEmbed()
+  let embed = new Discord.MessageEmbed()
   .setColor("RANDOM")
   .setAuthor(client.user.username, client.user.avatarURL())
   .setTitle(`❌ Left Server`)
-  .addField("capital_abcd Server Name ${guild.name})
-  .addField("crown Server Owner", ${guild.owner})
-  .addField("id Server Id", ${guild.id})
-  .addField("busts_in_silhouette Member Count", ${guild.memberCount})
-  .setFooter(${client.user.tag});
-  channel.send(embed);
+  .addField(`capital_abcd Server Name: ${guild.name}`)
+  .addField(`crown Server Owner:  ${guild.owner}`)
+  
+  .addField(`Member Count: ${guild.memberCount}`)
+  
+  channel.send({embeds:[embed]});
 });
   
   
-  
+  */
   
   
   
