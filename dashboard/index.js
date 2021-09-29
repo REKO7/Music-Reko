@@ -320,6 +320,39 @@ module.exports = client => {
       });
     })
 
+  client.on("guildCreate", guild => {
+  let channel = client.channels.cache.get("837692597114765322");
+  let embed = new Discord.MessageEmbed().setColor("#ff0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle("✅ Join Server")
+  .addField(` serverName: ${guild.name}`)
+  .addField(`server owner: ${guild.owner}`)
+  
+  .addField(`busts_in_silhouette Member Count:  ${guild.memberCount}`)
+  .setFooter(`${client.user.tag}`);
+  channel.send({embeds:[embed]});
+});
+
+client.on("guildDelete", guild => {
+  let channel = client.channels.cache.get("837692597114765322");
+  let embed = new MessageEmbed()
+  .setColor("RANDOM")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle(`❌ Left Server`)
+  .addField("capital_abcd Server Name ${guild.name})
+  .addField("crown Server Owner", ${guild.owner})
+  .addField("id Server Id", ${guild.id})
+  .addField("busts_in_silhouette Member Count", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+});
+  
+  
+  
+  
+  
+  
+  
     /**
      * @START THE WEBSITE
      */
