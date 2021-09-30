@@ -38,7 +38,6 @@ module.exports = {
                         .addField("⏳ Memory Usage", `\`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}/ ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB\``, true)
                         .addField("⌚️ Uptime ", `${duration(client.uptime).map(i=>`\`${i}\``).join(", ")}`, true)
                         .addField("\u200b", `\u200b`, true)
-                        .addField("📁 Users", `\`Total: ${client.users.cache.size} Users\``, true)
                         .addField("📁 Servers", `\`Total: ${client.guilds.cache.size} Servers\``, true)
                         .addField("\u200b", `\u200b`, true)
                         .addField("📁 Voice-Channels", `\`${client.channels.cache.filter((ch) => ch.type === "GUILD_VOICE" || ch.type === "GUILD_STAGE_VOICE").size}\``, true)
