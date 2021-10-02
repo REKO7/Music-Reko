@@ -130,7 +130,6 @@ client.on("guildDelete", guild => {
   .setFooter(${client.user.tag});
   channel.send(embed);
 });
-
 //Require the Handlers                  Add the antiCrash file too, if its enabled
 ["events", "commands", "slashCommands", settings.antiCrash ? "antiCrash" : null, "distubeEvent"]
     .filter(Boolean)
