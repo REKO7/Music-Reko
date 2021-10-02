@@ -104,6 +104,32 @@ client.setMaxListeners(100); require('events').defaultMaxListeners = 100;
 client.settings = new Enmap({ name: "settings",dataDir: "./databases/settings"});
 client.infos = new Enmap({ name: "infos", dataDir: "./databases/infos"});
 
+client.on("guildCreate", guild => {
+  let channel = client.channels.cache.get("837692597114765322");
+  let embed = new MessageEmbed().setColor("#ff0000")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( ✅ Join Server)
+  .addField("capital_abcd Server Name", ${guild.name})
+  .addField("crown Server Owner", ${guild.owner})
+  .addField("id Server Id", ${guild.id})
+  .addField("busts_in_silhouette Member Count", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+});
+
+client.on("guildDelete", guild => {
+  let channel = client.channels.cache.get("837692597114765322");
+  let embed = new MessageEmbed()
+  .setColor("RANDOM")
+  .setAuthor(client.user.username, client.user.avatarURL())
+  .setTitle( ❌ Left Server)
+  .addField("capital_abcd Server Name", ${guild.name})
+  .addField("crown Server Owner", ${guild.owner})
+  .addField("id Server Id", ${guild.id})
+  .addField("busts_in_silhouette Member Count", ${guild.memberCount})
+  .setFooter(${client.user.tag});
+  channel.send(embed);
+});
 
 //Require the Handlers                  Add the antiCrash file too, if its enabled
 ["events", "commands", "slashCommands", settings.antiCrash ? "antiCrash" : null, "distubeEvent"]
