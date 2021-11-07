@@ -46,7 +46,7 @@ module.exports = {
 				],
 
 			})
-			if (channel.userLimit != 0 && channel.full)
+			if (channel.userLimit != 100 && channel.full)
 				return message.reply({
 					embeds: [new MessageEmbed()
 						.setColor(ee.wrongcolor)
